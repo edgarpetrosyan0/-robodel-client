@@ -7,6 +7,7 @@ import { AuthGuard } from './user/auth.guard';
 import { MainPageComponent } from './main-page/main-page.component';
 import { FooddeliveryComponent } from './fooddelivery/fooddelivery.component';
 import { StoreComponent } from './fooddelivery/store/store.component';
+import { RestaurantsNearMeComponent } from './fooddelivery/restaurants-near-me/restaurants-near-me.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
   { path: 'food-delivery', component: FooddeliveryComponent },
   { path: 'food-store', component: StoreComponent },
+  { path: 'restaurants-near-me', component: RestaurantsNearMeComponent },
 
 ];
 

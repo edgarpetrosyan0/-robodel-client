@@ -16,6 +16,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { FooddeliveryComponent } from './fooddelivery/fooddelivery.component';
 import { StoreComponent } from './fooddelivery/store/store.component';
 import { GooglePlaceModule } from "ngx-google-places-autocomplete";
+import { RestaurantsNearMeComponent } from './fooddelivery/restaurants-near-me/restaurants-near-me.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { GooglePlaceModule } from "ngx-google-places-autocomplete";
     MainPageComponent,
     FooddeliveryComponent,
     StoreComponent,
+    RestaurantsNearMeComponent,
    
   ],
   imports: [

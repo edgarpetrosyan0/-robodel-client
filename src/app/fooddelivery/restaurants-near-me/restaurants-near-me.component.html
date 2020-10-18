@@ -1,0 +1,176 @@
+<header class="d-flex align-items-center bg-white fixed-top px-3">
+    <button class="hamburger-btn btn mr-3" (click)="opens()">
+      <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon"
+        style="pointer-events: none; display: block; width: 24px; height: 24px;">
+        <g class="style-scope yt-icon">
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" class="style-scope yt-icon" fill="#a0a0a0"></path>
+        </g>
+      </svg>
+    </button>
+  </header>
+  <div id="page" class="d-flex mt-5 pt-3">
+    <div id="side-menu" class="mobile aside">
+      <div class="side-menu-header d-flex align-items-center pl-3">
+        <button class="hamburger-btn btn mr-3" (click)="opens()">
+          <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon"
+            style="pointer-events: none; display: block; width: 24px; height: 24px;">
+            <g class="style-scope yt-icon">
+              <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" class="style-scope yt-icon" fill="#a0a0a0"></path>
+            </g>
+          </svg>
+        </button>
+      </div>
+      <div class="side-menu-body">
+        <div class="list-group">
+          <a routerLink="/home" class="list-group-item d-flex align-items-center">
+            <span><i class="fa fa-home" aria-hidden="true"></i>
+              Home</span>
+          </a>
+          <a href="#" class="list-group-item d-flex align-items-center">
+            <span><i class="fa fa-life-ring" aria-hidden="true"></i>
+              Help</span>
+          </a>
+          <a href="#" class="list-group-item d-flex align-items-center">
+            <span><i class="fa fa-user-o" aria-hidden="true"></i>
+              Sign In/Sign Up</span>
+          </a>
+        </div>
+        <div class="list-group">
+          <a href="#" class="list-group-item d-flex align-items-center">
+            <span class="text-truncate">About US</span>
+          </a>
+          <a href="#" class="list-group-item d-flex align-items-center">
+            <span class="text-truncate">Careers</span>
+          </a>
+          <a href="#" class="list-group-item d-flex align-items-center">
+            <span class="text-truncate">Blog</span>
+          </a>
+          <a href="#" class="list-group-item d-flex align-items-center">
+            <span class="text-truncate">Accessibility</span>
+          </a>
+          <a href="#" class="list-group-item d-flex align-items-center">
+            <span class="text-truncate">Be a RoboDel</span>
+          </a>
+          <a href="#" class="list-group-item d-flex align-items-center">
+            <span class="text-truncate">Be a Partner Restaurant</span>
+          </a>
+          <a href="#" class="list-group-item d-flex align-items-center">
+            <span class="text-truncate">RoboDel for Deliveries</span>
+          </a>
+  
+  
+        </div>
+      </div>
+    </div>
+    <main class="content w-100">
+      <div class="wrapper-header">
+        <div id="header" class="header">
+          <div class="header-content">
+            <div class="text-container">
+              <h1>Restaurants Near Me</h1>
+              <p>Order online for RoboDel’s super-fast delivery or pick-up.</p>
+              <div class="wrap">
+                <div class="search">
+                  <input type="text" ngx-google-places-autocomplete [options]="options" class="searchTerm"
+                    placeholder="Enter delivery address">
+                  <i class="fa fa-map-marker marker" aria-hidden="true"></i>
+  
+                  <button type="submit" (onAddressChange)="AddressChange($event)" class="searchButton">
+                    Find Restaurants
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+      <div class="list-group-flex">
+        <div class="col-md-3">
+          <h2 class="firtst-title">Best Food in San Diego
+          </h2>
+          <p>Explore 100s more restaurants in your area.</p>
+          <button type="button" class="view">View more restaurants <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+        </div>
+        <div class="col-md-3">
+          <div class="list-group">
+            <a routerLink="/food-store" class="list-group-item list-group-item-action">
+              <div class="d-flex w-100 justify-content-between">
+                <h5>Rubirosa Pizzeria e Ristorante</h5>
+              </div>
+              <p class="mb-1 sub-title">New York City • Pizza • $$</p>
+              <div class="mb-1 d-flex">4.7
+                <div class='rating-stars text-center'>
+                  <ul id='stars'>
+                    <li class='star' title='Poor' data-value='1'>
+                      <i class='fa fa-star fa-fw'></i>
+                    </li>
+                  </ul>
+                </div>
+                ,000+ ratings</div>
+            </a>
+          </div>
+          <div class="list-group">
+            <a routerLink="/food-store" class="list-group-item list-group-item-action">
+              <div class="d-flex w-100 justify-content-between">
+                <h5>Rubirosa Pizzeria e Ristorante</h5>
+              </div>
+              <p class="mb-1 sub-title">New York City • Pizza • $$</p>
+              <div class="mb-1 d-flex">4.7
+                <div class='rating-stars text-center'>
+                  <ul id='stars'>
+                    <li class='star' title='Poor' data-value='1'>
+                      <i class='fa fa-star fa-fw'></i>
+                    </li>
+                  </ul>
+                </div>
+                ,000+ ratings</div>
+            </a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="media">
+        <img src="//cdn.doordash.com/static/img/weblink/restaurant.svg?dd-nonce" class="mr-3" alt="...">
+        <div class="media-body">
+          <h5 class="mt-0 media-text">RoboDel is food delivery anywhere you go. With one of the largest networks of
+            restaurant options in New York City for Delis delivery, choose from 265 Delis stores restaurants near you!
+            Enjoy the most delicious Delis restaurants in New York City from the comfort of your home or office. Browse by
+            name, cuisine, or staff picks personalized to your location.
+  
+          </h5>
+        </div>
+      </div>
+      <ul class="ul-list">
+        <h1>Frequently asked questions
+        </h1>
+        <li class="li-list">
+          <input type="checkbox" checked>
+          <i></i>
+          <h2 class="acc-title">Languages Used</h2>
+          <p>This page was written in HTML and CSS. The CSS was compiled from SASS. I used Normalize as my CSS reset and
+            -prefix-free to save myself some headaches. I haven't quite gotten the hang of Slim for compiling into HTML,
+            but someday I'll use it since its syntax compliments that of SASS. Regardless, this could all be done in plain
+            HTML and CSS.</p>
+        </li>
+        <li class="li-list">
+          <input type="checkbox" checked>
+          <i></i>
+          <h2 class="acc-title">How it Works</h2>
+          <p>Using the sibling and checked selectors, we can determine the styling of sibling elements based on the
+            checked state of the checkbox input element. One use, as demonstrated here, is an entirely CSS and HTML
+            accordion element. Media queries are used to make the element responsive to different screen sizes.</p>
+        </li>
+        <li class="li-list">
+          <input type="checkbox" checked>
+          <i></i>
+          <h2 class="acc-title">Points of Interest</h2>
+          <p>By making the open state default for when :checked isn't detected, we can make this system accessable for
+            browsers that don't recognize :checked. The fallback is simply an open accordion. The accordion can be
+            manipulated with Javascript (if needed) by changing the "checked" property of the input element.</p>
+        </li>
+      </ul>
+    </main>
+    <div class="side-menu-backdrop" (click)="opens()"></div>
+  </div>
+  <app-footer [restaurantsNearMe] ='true'></app-footer>
