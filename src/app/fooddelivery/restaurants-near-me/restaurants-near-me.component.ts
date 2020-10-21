@@ -8,6 +8,16 @@ import { Component, OnInit } from '@angular/core';
 export class RestaurantsNearMeComponent implements OnInit {
 
   constructor() { }
+  restaurantsNearAll = [
+    { foodName: 'Chicken Burrito', foodType: 'Burrito', city: 'New York City' , price: 100},
+    { foodName: 'Steak Burrito', foodType: 'Burrito', city: 'New York City' , price: 100},
+    { foodName: 'Carnitas Burrito', foodType: 'Burrito', city: 'New York City' , price: 100},
+    { foodName: 'Barbacoa Burrito', foodType: 'Burrito', city: 'New York City' , price: 100},
+    { foodName: 'Chorizo Burrito', foodType: 'Burrito', city: 'New York City' , price: 100},
+    { foodName: 'Sofritas Burrito', foodType: 'Burrito', city: 'New York City' , price: 100},
+   
+  ];
+
   formattedaddress = ' ';
   options = {
     componentRestrictions: {
@@ -22,10 +32,10 @@ export class RestaurantsNearMeComponent implements OnInit {
   public AddressChange(address: any) {
     debugger;
     this.formattedaddress = address.formatted_address;
-    
-}
 
-opens() {
-  document.getElementById('side-menu').classList.toggle('open');
-}
+  }
+
+  opens() {
+    document.getElementById('side-menu').classList.toggle('open');
+  }
 }

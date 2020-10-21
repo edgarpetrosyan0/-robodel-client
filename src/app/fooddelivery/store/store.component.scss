@@ -28,7 +28,7 @@ header .search-box {
 }
 
 header .search-btn {
-  background-color: rgb(235, 23, 0);
+  background-color: rgb(255 198 37);
   border: none;
   color: #fff;
   font-weight: 700;
@@ -40,8 +40,8 @@ header .search-btn {
 .btn-outline-secondary:not(:disabled):not(.disabled):active,
 .show>.btn-outline-secondary.dropdown-toggle {
   color: #fff;
-  background-color: rgb(235, 23, 0) !important;
-  border-color: rgb(235, 23, 0) !important;
+  background-color: rgb(255 198 37) !important;
+  border-color: rgb(255 198 37) !important;
 }
 
 .btn-outline-secondary.focus,
@@ -116,7 +116,7 @@ main.content .video-row-title {
 
 .aside .list-group-item:hover {
   background-color: #fff;
-  color: #eb1700;
+  color: #f2b120;
   text-decoration: none;
 }
 
@@ -350,7 +350,7 @@ main.content .video-row-title {
   font-size: 16px;
   font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 700;
-  color: rgb(235, 23, 0);
+  color: rgb(255 198 37);
 }
 
 .eta-text {
@@ -375,7 +375,7 @@ main.content .video-row-title {
   font-size: 16px;
   font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 700;
-  color: rgb(235, 23, 0);
+  color: rgb(255 198 37);
 }
 
 .y-addres:hover {

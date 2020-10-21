@@ -5,10 +5,10 @@
             <h1>Your favorite restaurants, delivered</h1>
             <div class="wrap">
                 <div class="search">
-                    <input type="text" ngx-google-places-autocomplete [options]="options"   class="searchTerm" placeholder="Enter delivery address">
+                    <input type="text" ngx-google-places-autocomplete [options]="options"  (onAddressChange)="AddressChange($event)"  class="searchTerm" placeholder="Enter delivery address">
                     <i class="fa fa-map-marker marker" aria-hidden="true"></i>
 
-                    <button type="submit" (onAddressChange)="AddressChange($event)" class="searchButton">
+                    <button type="button" (click)="AddressChange($event)" class="searchButton">
                         <i class="fa fa-search"></i>
                     </button>
                 </div>

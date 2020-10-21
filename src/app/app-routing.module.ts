@@ -8,6 +8,10 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { FooddeliveryComponent } from './fooddelivery/fooddelivery.component';
 import { StoreComponent } from './fooddelivery/store/store.component';
 import { RestaurantsNearMeComponent } from './fooddelivery/restaurants-near-me/restaurants-near-me.component';
+import { FooddeliveryListComponent } from './fooddelivery/fooddelivery-list/fooddelivery-list.component';
+import { FoodCategoriesComponent } from './fooddelivery/fooddelivery-list/food-categories/food-categories.component';
+import { FoodFiltersComponent } from './fooddelivery/fooddelivery-list/food-filters/food-filters.component';
+import { PickupListComponent } from './pickup/pickup-list/pickup-list.component';
 
 
 const routes: Routes = [
@@ -17,9 +21,12 @@ const routes: Routes = [
   { path: 'sign-up', component: SignUpComponent },
   { path: 'home', component: MainPageComponent },
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
-  { path: 'food-delivery', component: FooddeliveryComponent },
+  { path: 'food-delivery-list', component: FooddeliveryListComponent },
   { path: 'food-store', component: StoreComponent },
   { path: 'restaurants-near-me', component: RestaurantsNearMeComponent },
+  { path: 'food-categories', component: FoodCategoriesComponent },
+  { path: 'food-filters', component: FoodFiltersComponent },
+  { path: 'pickup-list', component: PickupListComponent },
 
 ];
 

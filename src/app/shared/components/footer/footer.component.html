@@ -1,184 +1,38 @@
-<div class="footer" [ngClass]="{'footer-def': !regFooter ,'footer-reg': regFooter}">
-    <div class="container" *ngIf="!regFooter">
-        <div class="row">
-            <div [ngClass]="{'col-md-3': !restaurantsNearMe ,'col-md-12': restaurantsNearMe}">
-                <div class="footer-col middle">
-                    <h4 *ngIf="restaurantsNearMe" [ngClass]="{'color-gray': regFooter}">We also have more tasty food delivery options
-                    </h4>
-                    <h4 *ngIf="!restaurantsNearMe" [ngClass]="{'color-gray': regFooter}">Top Cities</h4>
-                    <ul class="list-unstyled li-space-lg p-small">
-                        <li class="media">
-                            <div class="media-body">
-                                <a class="white" *ngIf="!restaurantsNearMe" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">New York
-                                    City</a>
-                                <a class="white" *ngIf="restaurantsNearMe" >African near
-                                    me</a>
-                            </div>
-                        </li>
-                        <li class="media">
-                            <div class="media-body"><a class="white" *ngIf="!restaurantsNearMe" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Los Angeles</a>
-                                <a class="white" *ngIf="restaurantsNearMe" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Alcohol near me</a>
-                            </div>
-                        </li>
-                        <li class="media">
-                            <div class="media-body"><a class="white" *ngIf="!restaurantsNearMe" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Toronto</a>
-                                <a class="white" *ngIf="restaurantsNearMe" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Asian near me</a></div>
-                        </li>
-                        <li class="media">
-                            <div class="media-body"><a class="white" *ngIf="!restaurantsNearMe" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Chicago</a>
-                                <a class="white" *ngIf="restaurantsNearMe" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Australian near me</a></div>
-                        </li>
-                        <li class="media">
-                            <div class="media-body"><a class="white" *ngIf="!restaurantsNearMe" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Houston</a>
-                                <a class="white" *ngIf="restaurantsNearMe" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Barbecue near me</a>
-                            </div>
-                        </li>
-                        <li class="media">
-                            <div class="media-body"><a class="white" *ngIf="!restaurantsNearMe" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Brooklyn</a>
-                                <a class="white" *ngIf="restaurantsNearMe" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">African near
-                                    me</a></div>
-                        </li>
-                        <li class="media">
-                            <div class="media-body"><a class="white" *ngIf="!restaurantsNearMe" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">San Diego</a>
-                                <a class="white" *ngIf="restaurantsNearMe" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Breakfast near me</a></div>
-                        </li>
-                        <li class="media">
-                            <div class="media-body"><a class="white" *ngIf="!restaurantsNearMe" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Las Vegas</a>
-                                <a class="white" *ngIf="restaurantsNearMe" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Bubble Tea near me</a></div>
-                        </li>
-
-                    </ul>
-                    <ul class="list-unstyled li-space-lg p-small">
-                        <li class="media">
-                            <div class="media-body"><a class="white" *ngIf="!restaurantsNearMe" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">San Francisco</a>
-                                <a class="white" *ngIf="restaurantsNearMe" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Burgers near me</a></div>
-                        </li>
-                        <li class="media">
-                            <div class="media-body"><a class="white" *ngIf="!restaurantsNearMe" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Seattle</a>
-                                <a class="white" *ngIf="restaurantsNearMe" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Cafes near me</a></div>
-                        </li>
-                        <li class="media">
-                            <div class="media-body"><a class="white" *ngIf="!restaurantsNearMe" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Atlanta</a>
-                                <a class="white" *ngIf="restaurantsNearMe" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Caribbean near me</a></div>
-                        </li>
-                        <li class="media">
-                            <div class="media-body"><a class="white" *ngIf="!restaurantsNearMe" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Queens</a>
-                                <a class="white" *ngIf="restaurantsNearMe" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Catering near me</a></div>
-                        </li>
-                        <li class="media">
-                            <div class="media-body"><a class="white" *ngIf="!restaurantsNearMe" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Vancouver, BC</a>
-                                <a class="white" *ngIf="restaurantsNearMe" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Chicken near me</a></div>
-                        </li>
-                        <li class="media">
-                            <div class="media-body"><a class="white" *ngIf="!restaurantsNearMe" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Miami</a>
-                                <a class="white" *ngIf="restaurantsNearMe" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Chinese near me</a></div>
-                        </li>
-                        <li class="media">
-                            <div class="media-body"><a class="white" *ngIf="!restaurantsNearMe" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">San Antonio</a>
-                                <a class="white" *ngIf="restaurantsNearMe" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Coffee & Tea near me</a></div>
-                        </li>
-                        <li class="media">
-                            <div class="media-body"><a class="white" *ngIf="!restaurantsNearMe" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Phoenix</a>
-                                <a class="white" *ngIf="restaurantsNearMe" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Desserts near me</a></div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-3" *ngIf="!restaurantsNearMe">
-                <div class="footer-col middle">
-                    <h4 [ngClass]="{'color-gray': regFooter}">Top Cuisines Near You</h4>
-                    <ul class="list-unstyled li-space-lg p-small">
-                        <li class="media">
-                            <div class="media-body"><a class="white" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">New York City</a></div>
-                        </li>
-                        <li class="media">
-                            <div class="media-body"><a class="white" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Los Angeles</a></div>
-                        </li>
-                        <li class="media">
-                            <div class="media-body"><a class="white" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Toronto</a></div>
-                        </li>
-                        <li class="media">
-                            <div class="media-body"><a class="white" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Chicago</a></div>
-                        </li>
-                        <li class="media">
-                            <div class="media-body"><a class="white" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Houston</a></div>
-                        </li>
-                        <li class="media">
-                            <div class="media-body"><a class="white" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Brooklyn</a></div>
-                        </li>
-                        <li class="media">
-                            <div class="media-body"><a class="white" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">San Diego</a></div>
-                        </li>
-                        <li class="media">
-                            <div class="media-body"><a class="white" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Las Vegas</a></div>
-                        </li>
-
-                    </ul>
-                    <ul class="list-unstyled li-space-lg p-small">
-                        <li class="media">
-                            <div class="media-body"><a class="white" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">San Francisco</a></div>
-                        </li>
-                        <li class="media">
-                            <div class="media-body"><a class="white" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Seattle</a></div>
-                        </li>
-                        <li class="media">
-                            <div class="media-body"><a class="white" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Atlanta</a></div>
-                        </li>
-                        <li class="media">
-                            <div class="media-body"><a class="white" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Queens</a></div>
-                        </li>
-                        <li class="media">
-                            <div class="media-body"><a class="white" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Vancouver, BC</a></div>
-                        </li>
-                        <li class="media">
-                            <div class="media-body"><a class="white" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Miami</a></div>
-                        </li>
-                        <li class="media">
-                            <div class="media-body"><a class="white" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">San Antonio</a></div>
-                        </li>
-                        <li class="media">
-                            <div class="media-body"><a class="white" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Phoenix</a></div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
+<div class="footer" >
     <div class="container">
         <div class="row">
             <div class="col-md-3">
                 <div class="footer-col middle">
-                    <h4 [ngClass]="{'color-gray': regFooter}">Get to Know Us</h4>
+                    <h4>Get to Know Us</h4>
                     <ul class="list-unstyled li-space-lg p-small">
                         <li class="media">
-                            <div class="media-body"><a class="white" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">About Us</a></div>
+                            <div class="media-body"><a class="white" routerLink="/food-delivery">About Us</a></div>
                         </li>
                         <li class="media">
-                            <div class="media-body"><a class="white" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Careers</a></div>
+                            <div class="media-body"><a class="white" routerLink="/food-delivery">Careers</a></div>
                         </li>
                         <li class="media">
-                            <div class="media-body"><a class="white" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Blog</a></div>
+                            <div class="media-body"><a class="white" routerLink="/food-delivery">Blog</a></div>
                         </li>
                         <li class="media">
-                            <div class="media-body"><a class="white" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Engineering Blog</a>
+                            <div class="media-body"><a class="white" routerLink="/food-delivery">Engineering Blog</a>
                             </div>
                         </li>
                         <li class="media">
-                            <div class="media-body"><a class="white" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Gift Cards</a></div>
+                            <div class="media-body"><a class="white" routerLink="/food-delivery">Gift Cards</a></div>
                         </li>
                         <li class="media">
-                            <div class="media-body"><a class="white" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">RoboDel Stories</a>
+                            <div class="media-body"><a class="white" routerLink="/food-delivery">RoboDel Stories</a>
                             </div>
                         </li>
                         <li class="media">
-                            <div class="media-body"><a class="white" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">LinkedIn</a></div>
+                            <div class="media-body"><a class="white" routerLink="/food-delivery">LinkedIn</a></div>
                         </li>
                         <li class="media">
-                            <div class="media-body"><a class="white" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Glassdoor</a></div>
+                            <div class="media-body"><a class="white" routerLink="/food-delivery">Glassdoor</a></div>
                         </li>
                         <li class="media">
-                            <div class="media-body"><a class="white" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Accessibility</a></div>
+                            <div class="media-body"><a class="white" routerLink="/food-delivery">Accessibility</a></div>
                         </li>
                     </ul>
 
@@ -186,36 +40,36 @@
             </div>
             <div class="col-md-3">
                 <div class="footer-col middle">
-                    <h4 [ngClass]="{'color-gray': regFooter}">Let Us Help You</h4>
+                    <h4>Let Us Help You</h4>
                     <ul class="list-unstyled li-space-lg p-small">
                         <li class="media">
-                            <div class="media-body"><a class="white" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Account Details</a>
+                            <div class="media-body"><a class="white" routerLink="/food-delivery">Account Details</a>
                             </div>
                         </li>
                         <li class="media">
-                            <div class="media-body"><a class="white" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Order History</a></div>
+                            <div class="media-body"><a class="white" routerLink="/food-delivery">Order History</a></div>
                         </li>
                         <li class="media">
-                            <div class="media-body"><a class="white" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Help</a></div>
+                            <div class="media-body"><a class="white" routerLink="/food-delivery">Help</a></div>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="col-md-2">
                 <div class="footer-col middle">
-                    <h4 [ngClass]="{'color-gray': regFooter}">Doing Business</h4>
+                    <h4>Doing Business</h4>
                     <ul class="list-unstyled li-space-lg p-small">
                         <li class="media">
-                            <div class="media-body"><a class="white" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Become a Dasher</a>
+                            <div class="media-body"><a class="white" routerLink="/food-delivery">Become a Dasher</a>
                             </div>
                         </li>
                         <li class="media">
-                            <div class="media-body"><a class="white" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Be a Partner
+                            <div class="media-body"><a class="white" routerLink="/food-delivery">Be a Partner
                                     Restaurant</a>
                             </div>
                         </li>
                         <li class="media">
-                            <div class="media-body"><a class="white" [ngClass]="{'color-gray': regFooter}" routerLink="/food-delivery">Get Dashers for
+                            <div class="media-body"><a class="white" routerLink="/food-delivery">Get Dashers for
                                     Deliveries</a></div>
                         </li>
                     </ul>
@@ -223,8 +77,8 @@
             </div>
             <div class="col-md-3">
                 <div class="footer-col middle">
-                    <a href="" [ngClass]="{'color-gray': regFooter}">
-                        <div class="store" [ngClass]="{'store-gr': regFooter}"><svg height="48px" width="144px" fill="#ffffff" x="0px" y="0px"
+                    <a href="">
+                        <div class="store"><svg height="48px" width="144px" fill="#ffffff" x="0px" y="0px"
                                 viewBox="0 0 131 44" aria-hidden="true">
                                 <path
                                     d="M95.752,9.966l0.07,0.861h0.036c0.259-0.448,0.883-0.99,1.838-0.99c1.002,0,2.039,0.648,2.039,2.463v3.406 h-1.45v-3.242c0-0.825-0.307-1.45-1.096-1.45c-0.578,0-0.978,0.413-1.132,0.849c-0.047,0.118-0.07,0.295-0.07,0.46v3.383h-1.45 v-4.031c0-0.661-0.024-1.214-0.047-1.709H95.752z">
@@ -294,8 +148,8 @@
                                 </path>
                             </svg></div>
                     </a>
-                    <a href="" [ngClass]="{'color-gray': regFooter}">
-                        <div class="store" [ngClass]="{'store-gr': regFooter}">
+                    <a href="">
+                        <div class="store">
                             <svg height="48px" width="144px" fill="#ffffff" x="0px" y="0px" viewBox="0 0 139 44"
                                 aria-hidden="true">
                                 <path
@@ -379,10 +233,10 @@
         </div>
     </div>
 </div>
-<div class="copyright" [ngClass]="{'copyright-reg': regFooter}">
+<div class="copyright">
     <div class="container">
         <div class="row">
-            <p class="p-small" [ngClass]="{'color-gray': regFooter}">Copyright © 2020 <a href="" [ngClass]="{'color-gray': regFooter}"><img src="https://edgarpetrosyan0.github.io/-robodel-client/assets/images/logo.png" alt="alternative"
+            <p class="p-small">Copyright © 2020 <a href=""><img src="https://edgarpetrosyan0.github.io/-robodel-client/assets/images/logo.png" alt="alternative"
                         class="footer-img">ROBODEL</a></p>
             <div class="social-btn-werapper"><a href=""><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0;">

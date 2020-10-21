@@ -40,7 +40,7 @@
     font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-weight: 700;
     margin-left: 6px;
-    color: rgb(255, 48, 8);
+    color: rgb(255 198 37);
     text-decoration: none;
     cursor: pointer;
 }
@@ -69,7 +69,7 @@
 }
 
 .header a {
-    color: rgb(255, 48, 8);
+    color: rgb(255 198 37);
     text-align: center;
     padding: 12px;
     text-decoration: none;
@@ -162,8 +162,8 @@
 
 .btn-login {
     border-radius: 20px;
-    background: #ff3008;
-    border: 1px solid #ff3008;
+    background: rgb(255 198 37);
+    border: 1px solid rgb(255 198 37);
     outline: none;
     color: #fff;
     font-weight: 700;

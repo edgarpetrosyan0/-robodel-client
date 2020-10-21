@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main-page',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(  private router: Router) { }
   formattedaddress = ' ';
   options = {
     componentRestrictions: {
@@ -19,7 +20,10 @@ export class MainPageComponent implements OnInit {
   }
   public AddressChange(address: any) {
     debugger
-   this.formattedaddress = address.formatted_address;
+    let formataddress = this.formattedaddress;
+    if ( formataddress = address.formatted_address) {
+    this.router.navigate(['food-delivery-list']);
+   }
 }
 }
 

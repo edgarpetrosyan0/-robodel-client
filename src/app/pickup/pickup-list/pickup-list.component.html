@@ -1,0 +1,130 @@
+<header class="d-flex align-items-center bg-white fixed-top px-3">
+  <button class="hamburger-btn btn mr-3" (click)="opens()">
+    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon"
+      style="pointer-events: none; display: block; width: 24px; height: 24px;">
+      <g class="style-scope yt-icon">
+        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" class="style-scope yt-icon" fill="#a0a0a0"></path>
+      </g>
+    </svg>
+  </button>
+  <a class="page-btn" (click)="deliveryPage()">Delivery</a>
+  <a class="page-btn" (click)="pickupPage()">Pickup</a>
+  <p class="m-0 addres-header">Preorder to <a class="y-addres" (click)="yourAddresBox()">Your Addres</a></p>
+  <div class="search-addres-box" *ngIf="addresbox">
+    <div> <input type="text" ngx-google-places-autocomplete [options]="options" class="search-header-address"
+        placeholder="Address" (onAddressChange)="AddressChange($event)"></div>
+    <div>
+
+    </div>
+  </div>
+  <div class="flex-grow-1">
+    <div class="search-box input-group input-group-sm d-sm-flex">
+      <input type="text" class="form-control">
+      <div class="input-group-append">
+        <button class=" btn-outline-secondary border search-btn" type="button">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i> 0
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+<div id="page" class="d-flex mt-5 pt-3">
+  <div id="side-menu" class="mobile aside">
+    <div class="side-menu-header d-flex align-items-center pl-3">
+      <button class="hamburger-btn btn mr-3" (click)="opens()">
+        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon"
+          style="pointer-events: none; display: block; width: 24px; height: 24px;">
+          <g class="style-scope yt-icon">
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" class="style-scope yt-icon" fill="#a0a0a0"></path>
+          </g>
+        </svg>
+      </button>
+    </div>
+    <div class="side-menu-body">
+      <div class="list-group">
+        <a routerLink="/home" class="list-group-item d-flex align-items-center">
+          <span><i class="fa fa-home" aria-hidden="true"></i>
+            Home</span>
+        </a>
+        <a href="#" class="list-group-item d-flex align-items-center">
+          <span><i class="fa fa-life-ring" aria-hidden="true"></i>
+            Help</span>
+        </a>
+        <a href="#" class="list-group-item d-flex align-items-center">
+          <span><i class="fa fa-user-o" aria-hidden="true"></i>
+            Sign In/Sign Up</span>
+        </a>
+      </div>
+      <div class="list-group">
+        <a href="#" class="list-group-item d-flex align-items-center">
+          <span class="text-truncate">About US</span>
+        </a>
+        <a href="#" class="list-group-item d-flex align-items-center">
+          <span class="text-truncate">Careers</span>
+        </a>
+        <a href="#" class="list-group-item d-flex align-items-center">
+          <span class="text-truncate">Blog</span>
+        </a>
+        <a href="#" class="list-group-item d-flex align-items-center">
+          <span class="text-truncate">Accessibility</span>
+        </a>
+        <a href="#" class="list-group-item d-flex align-items-center">
+          <span class="text-truncate">Be a RoboDel</span>
+        </a>
+        <a href="#" class="list-group-item d-flex align-items-center">
+          <span class="text-truncate">Be a Partner Restaurant</span>
+        </a>
+        <a href="#" class="list-group-item d-flex align-items-center">
+          <span class="text-truncate">RoboDel for Deliveries</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <main class="content w-100 d-flex">
+    <section class="col-md-4 all_restaurants">
+      <div class="d-flex categoria">
+        <span *ngFor="let item of foods">
+          <img class="img-fluid card-img" [src]="item.url" alt="alternative">
+          <p class="foodCategoria-title">{{item.foodname}} </p>
+        </span>
+      </div>
+      <div class="list-group-flex">
+        <div>
+          <h2 class="firtst-title">Restaurants Nearby
+          </h2>
+        </div>
+        <div>
+          <div class="list-group" *ngFor="let item of restaurantsNearAll">
+            <a (click)="foodStore()" class="list-group-item list-group-item-action">
+              <span class="d-flex">
+                <img
+                  src="https://cdn.guidingtech.com/imager/assets/189869/HD-Mouth-Watering-Food-Wallpapers-for-Desktop-12_4d470f76dc99e18ad75087b1b8410ea9.jpg?1573743472"
+                  class="img-best">
+                <img
+                  src="https://cdn.guidingtech.com/imager/assets/189869/HD-Mouth-Watering-Food-Wallpapers-for-Desktop-12_4d470f76dc99e18ad75087b1b8410ea9.jpg?1573743472"
+                  class="img-best">
+              </span>
+              <div class="d-flex w-100 justify-content-between">
+                <h5>{{item.foodName}}</h5>
+              </div>
+              <p class="mb-1 sub-title">{{item.city}} • {{item.foodType}} • {{item.price}}$ <p>
+                <div class="reting-color">4.7 <i class='fa fa-star fa-fw'></i> ,000 + ratings</div>
+                <span class="time-delivery">
+                  <b>20 min</b> <br>
+                  <b>Free delivery</b>
+                </span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <div class="map-wrapper col-md-8">
+      <agm-map [latitude]="lat" [longitude]="lng">
+        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+      </agm-map>
+    </div>
+  </main>
+  <div class="side-menu-backdrop" (click)="opens()"></div>
+</div>
+<app-footer></app-footer>

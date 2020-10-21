@@ -12,9 +12,9 @@ a:hover {
 .btn-solid-lg {
     display: inline-block;
     padding: 1.375rem 2.625rem 1.375rem 2.625rem;
-    border: 0.125rem solid rgb(235, 23, 0);
+    border: 0.125rem solid rgb(255 198 37);
     border-radius: 2rem;
-    background-color: rgb(235, 23, 0);
+    background-color: rgb(255 198 37);
     color: #fff;
     font: 700 0.875rem/0 "Open Sans", sans-serif;
     text-decoration: none;
@@ -23,7 +23,7 @@ a:hover {
 
 .btn-solid-lg:hover {
     background-color: transparent;
-    color: rgb(235, 23, 0);
+    color: rgb(255 198 37);
     text-decoration: none;
 }
 
@@ -31,17 +31,17 @@ a:hover {
 .btn-outline-sm {
     display: inline-block;
     padding: 0.875rem 1.5rem 0.875rem 1.5rem;
-    border: 0.125rem solid rgb(235, 23, 0);
+    border: 0.125rem solid rgb(255 198 37);
     border-radius: 2rem;
     background-color: transparent;
-    color: rgb(235, 23, 0);
+    color: rgb(255 198 37);
     font: 700 0.875rem/0 "Open Sans", sans-serif;
     text-decoration: none;
     transition: all 0.2s;
 }
 
 .btn-outline-sm:hover {
-    background-color: rgb(235, 23, 0);
+    background-color: rgb(255 198 37);
     color: #fff;
     text-decoration: none;
 }
@@ -82,7 +82,7 @@ a:hover {
 
 .navbar-custom .nav-item .btn-outline-sm:hover {
     background-color: #fff;
-    color: rgb(235, 23, 0);
+    color: rgb(255 198 37);
 }
 
 .navbar-custom .navbar-toggler {

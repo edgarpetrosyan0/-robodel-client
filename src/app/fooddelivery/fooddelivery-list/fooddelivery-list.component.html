@@ -1,0 +1,191 @@
+<header class="d-flex align-items-center bg-white fixed-top px-3">
+  <button class="hamburger-btn btn mr-3" (click)="opens()">
+    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon"
+      style="pointer-events: none; display: block; width: 24px; height: 24px;">
+      <g class="style-scope yt-icon">
+        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" class="style-scope yt-icon" fill="#a0a0a0"></path>
+      </g>
+    </svg>
+  </button>
+  <a class="page-btn">Delivery</a>
+    <a class="page-btn" (click)="pickupPage()">Pickup</a>
+    <p class="m-0 addres-header">Preorder to <a class="y-addres" (click)="yourAddresBox()">Your Addres</a></p>
+    <div class="search-addres-box" *ngIf="addresbox">
+     <div> <input type="text" ngx-google-places-autocomplete [options]="options" class="search-header-address"
+        placeholder="Address" (onAddressChange)="AddressChange($event)"></div>
+        <div>
+
+        </div>
+    </div>
+    <div class="flex-grow-1">
+      <div class="search-box input-group input-group-sm d-sm-flex">
+        <input type="text" class="form-control">
+        <div class="input-group-append">
+          <button class=" btn-outline-secondary border search-btn" type="button">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i> 0
+          </button>
+        </div>
+      </div>
+    </div>
+</header>
+<div id="page" class="d-flex mt-5 pt-3">
+  <div id="side-menu" class="mobile aside">
+    <div class="side-menu-header d-flex align-items-center pl-3">
+      <button class="hamburger-btn btn mr-3" (click)="opens()">
+        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon"
+          style="pointer-events: none; display: block; width: 24px; height: 24px;">
+          <g class="style-scope yt-icon">
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" class="style-scope yt-icon" fill="#a0a0a0"></path>
+          </g>
+        </svg>
+      </button>
+    </div>
+    <div class="side-menu-body">
+      <div class="list-group">
+        <a routerLink="/home" class="list-group-item d-flex align-items-center">
+          <span><i class="fa fa-home" aria-hidden="true"></i>
+            Home</span>
+        </a>
+        <a href="#" class="list-group-item d-flex align-items-center">
+          <span><i class="fa fa-life-ring" aria-hidden="true"></i>
+            Help</span>
+        </a>
+        <a href="#" class="list-group-item d-flex align-items-center">
+          <span><i class="fa fa-user-o" aria-hidden="true"></i>
+            Sign In/Sign Up</span>
+        </a>
+      </div>
+      <div class="list-group">
+        <a href="#" class="list-group-item d-flex align-items-center">
+          <span class="text-truncate">About US</span>
+        </a>
+        <a href="#" class="list-group-item d-flex align-items-center">
+          <span class="text-truncate">Careers</span>
+        </a>
+        <a href="#" class="list-group-item d-flex align-items-center">
+          <span class="text-truncate">Blog</span>
+        </a>
+        <a href="#" class="list-group-item d-flex align-items-center">
+          <span class="text-truncate">Accessibility</span>
+        </a>
+        <a href="#" class="list-group-item d-flex align-items-center">
+          <span class="text-truncate">Be a RoboDel</span>
+        </a>
+        <a href="#" class="list-group-item d-flex align-items-center">
+          <span class="text-truncate">Be a Partner Restaurant</span>
+        </a>
+        <a href="#" class="list-group-item d-flex align-items-center">
+          <span class="text-truncate">RoboDel for Deliveries</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <main class="content w-100">
+    <div class="wrapper-header">
+      <div id="header" class="header">
+        <div class="header-content">
+          <div class="text-container">
+            <h1>Food delivery in New York City</h1>
+            <p>Order online for RoboDel’s super-fast delivery or pick-up.</p>
+            <div class="wrap">
+              <div class="search">
+                <input type="text" ngx-google-places-autocomplete [options]="options" class="searchTerm"
+                placeholder="Address" (onAddressChange)="AddressChange($event)">
+                <i class="fa fa-map-marker marker" aria-hidden="true"></i>
+
+                <button type="submit" (onAddressChange)="AddressChange($event)" class="searchButton">
+                  Find Restaurants
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="section_one">
+      <div class="col-md-12 filters-wrapper">
+        <span *ngFor="let item of foods">
+          <img class="img-fluid card-img" [src]="item.url" alt="alternative">
+          <p class="foodCategoria-title">{{item.foodname}} </p>
+        </span>
+
+      </div>
+      <div class="col-md-12 filters-wrapper">
+        <button type="button" class="btn btn-info" (click)="filters()">Pickup</button>
+        <button type="button" class="btn btn-info">Over 4.5 <i class='fa fa-star fa-fw'></i></button>
+        <button type="button" class="btn btn-info">Under 30 min</button>
+        <button type="button" class="btn btn-info">Vegetarian</button>
+        <button type="button" class="btn btn-info">$,$$</button>
+        <button type="button" class="btn btn-info">Group Order</button>
+        <button type="button" class="btn btn-info">RoboPass</button>
+      </div>
+
+      <div class="col-md-12 list-group-flex"  *ngFor="let item of restaurantsNearAll">
+        <div>
+          <h2 class="firtst-title">Best Food in San Diego
+          </h2>
+          <p class="sub-title">Support Black-owned businesses in your neighborhood and get $0 delivery fees through
+            12/31</p>
+          <button type="button" class="view" (click)="seeAll()">See All <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+        </div>
+        <div class="grid-list">
+          <div class="list-group" *ngFor="let item of restaurantsNearAll">
+            <a routerLink="/food-store" class="shadow-border-none m-b-0 list-group-item list-group-item-action">
+              <img
+                src="https://cdn.guidingtech.com/imager/assets/189869/HD-Mouth-Watering-Food-Wallpapers-for-Desktop-12_4d470f76dc99e18ad75087b1b8410ea9.jpg?1573743472">
+              <div class="d-flex w-100 justify-content-between">
+                <h5>Ruby's Cafe - SoHo</h5>
+              </div>
+              <p class="mb-1 sub-title">Free delivery 26min <p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="all_restaurants">
+      <div class="list-group-flex">
+        <div class="col-md-3">
+          <h2 class="firtst-title">Best in New York City
+          </h2>
+          <p>3,716 restaurants in New York City
+          </p>
+          <div class="d-flex">
+            <span *ngFor="let item of foods">
+              <img class="img-fluid card-img" [src]="item.url" alt="alternative">
+              <p class="foodCategoria-title">{{item.foodname}} </p>
+            </span>
+
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="list-group" *ngFor="let item of restaurantsNearAll">
+            <a (click)="foodStore()" class="list-group-item list-group-item-action">
+              <span class="d-flex">
+                <img
+                  src="https://cdn.guidingtech.com/imager/assets/189869/HD-Mouth-Watering-Food-Wallpapers-for-Desktop-12_4d470f76dc99e18ad75087b1b8410ea9.jpg?1573743472"
+                  class="img-best">
+                <img
+                  src="https://cdn.guidingtech.com/imager/assets/189869/HD-Mouth-Watering-Food-Wallpapers-for-Desktop-12_4d470f76dc99e18ad75087b1b8410ea9.jpg?1573743472"
+                  class="img-best">
+              </span>
+              <div class="d-flex w-100 justify-content-between">
+                <h5>{{item.foodName}}</h5>
+              </div>
+              <p class="mb-1 sub-title">{{item.city}} • {{item.foodType}} • {{item.price}}$ <p>
+                <div class="reting-color">4.7 <i class='fa fa-star fa-fw'></i> ,000 + ratings</div>
+               <span class="time-delivery">
+                <b>20 min</b> <br>
+                <b>Free delivery</b>
+                </span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="side-menu-backdrop" (click)="opens()"></div>
+</div>
+<app-footer></app-footer>
